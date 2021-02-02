@@ -11,7 +11,7 @@ class Rating(models.Model):
 class Car(models.Model):
     carmodel = models.CharField(max_length=100, null=True)
     carmake = models.CharField(max_length=100, null=True)
-    rating = models.ManyToManyField(Rating)
+    rating = models.ManyToManyField(Rating, default=0)
 
     def __str__(self):
         return f"{self.carmake} {self.carmodel}"
