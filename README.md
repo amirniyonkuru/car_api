@@ -9,10 +9,14 @@ POST/cars
 GET/cars
 POST/popular
 POST/rate/id
+
+
 ....
 admin panel
 username: admin
 password: admin
 
+
+Body request fields name(carmake, carmodel)
 the project is hosted on heroku and the link to live project is:(https://car-api-amir.herokuapp.com/cars/) 
 
