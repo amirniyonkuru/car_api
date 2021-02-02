@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car</title>
+</head>
+<style>
+    table, th, td {
+        border: 1px solid black;
+        width: 50%;
+    }
+    h4{
+        color: red;
+    }
+    
+</style>
+<body>
+    <h3>Search Car</h3>
+    <form action="" method="GET">
+        <label for="model">Model: </label>
+        <input type="text" id="model" name="model" required><br><br>
+        <label for="make">Make: </label>
+        <input type="text" name="make" id="make" required>
+        <input type="submit" value="Search">
+    </form><br>
+    {% if messages %}
+        {% for message in messages %}
+            <h4>{{message}}</h4>
+        {% endfor %}
+    {% endif %}
+    <table>
+        <thead>
+            <th>Make</th>
+            <th>Model</th>
+        </thead>
+        {% for result in result %}
+        <tr>
+            <td>{{result.Make_Name}}</td>
+            <td>{{result.Model_Name}}</td>
+        </tr>
+        {% endfor %}
+
+    </table>
+</body>
+</html>
